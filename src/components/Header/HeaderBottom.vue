@@ -1,11 +1,11 @@
 <script>
 import AllButton from '../All/AllButton.vue';
-import HeaderSlide from './HeaderSlide.vue';
+import SectionTitle from '../All/SectionTitle.vue';
 export default {
     name: 'HeaderBottom',
     components:{
         AllButton,
-        HeaderSlide,
+        SectionTitle,
     },
     data() {
         return {
@@ -23,7 +23,10 @@ export default {
 
         </div>
         <div class="col-5 h-100 d-flex flex-column justify-content-center">
-            <HeaderSlide />
+            <SectionTitle 
+            :section="'h1'"
+            :title="'our team'" 
+            />
             <div class="group_buttons d-flex flex-wrap gap-5">
                 <AllButton :text="'read more'"/>
                 <AllButton :text="'purchase'" :color="'tm_orange'"/>

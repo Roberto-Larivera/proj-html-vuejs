@@ -61,9 +61,9 @@ export default {
 h2,
 h1,
 h3 {
-    font-family: 'Playfair Display', serif;
     font-weight: 700;
     color: $text_color-14;
+    text-transform: capitalize;
 }
 
 .text_orange {
@@ -75,7 +75,7 @@ p {
     font-weight: 300;
 }
 .line_twxt-orange{
-    width: 10%;
+    width: 50px;
     border: 1px solid $border_color-5;
 }
 </style>
