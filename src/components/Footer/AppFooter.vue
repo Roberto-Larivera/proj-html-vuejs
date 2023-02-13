@@ -11,9 +11,9 @@ export default {
 </script>
 
 <template>
-  <div>
+  <footer>
     AppFooter
-  </div>
+  </footer>
 </template>
 
 <style lang="scss" scoped>

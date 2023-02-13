@@ -11,9 +11,9 @@ export default {
 </script>
 
 <template>
-  <div>
+  <header>
     AppHeader
-  </div>
+  </header>
 </template>
 
 <style lang="scss" scoped>
