@@ -39,5 +39,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
+header{
+  .header_top{
+    height: 100px;
+  }
+}
 </style>

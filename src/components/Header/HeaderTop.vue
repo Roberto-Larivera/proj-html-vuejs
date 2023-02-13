@@ -11,12 +11,12 @@ export default {
 </script>
 
 <template>
-    <div class="row row-cols-2">
-        <div class="col">
-            logo
+    <div class="row row-cols-2 h-100 p-3 align-content-center">
+        <div class="col h-100 d-flex align-items-center">
+            <img class="h-25" src="../../assets/img/logo-img-01.png" alt="logo_Everlead">
         </div>
-        <div class="col d-flex justify-content-end">
-            <ul class="d-flex justify-content-between w-100">
+        <div class="col d-flex justify-content-end align-items-center">
+            <ul class="d-flex justify-content-between align-content-center mb-0 w-100">
                 <li>
                     <a href="#nogo">
                         link                    
