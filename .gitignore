@@ -25,4 +25,5 @@ dist-ssr
 
 # Personal
 ./src/components/Template
-./src/assets/Diagrams/!(DiagrammaProgetto.drawio)
+./src/assets/Diagrams/*.bkp
+./src/assets/Diagrams/*.bkp
