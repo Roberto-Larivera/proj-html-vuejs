@@ -17,7 +17,7 @@ export default {
 </script>
 
 <template>
-  <header>
+  <header class="bg_image-slide">
     <!-- BG SLIDERS HEADER  -->
     <div class="bg-sliders">
       <div class="container">
@@ -42,6 +42,14 @@ export default {
 header{
   .header_top{
     height: 100px;
+  }
+  .header_bottom{
+    height: 600px;
+  }
+  &.bg_image-slide{
+    background-image: url('../../assets/img/rev-slider-main-home-img-03.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 </style>
