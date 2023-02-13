@@ -1,6 +1,12 @@
 <script>
+import HeaderTop from './HeaderTop.vue'
+import HeaderBottom from './HeaderBottom.vue'
 export default {
   name: 'AppHeader',
+  components:{
+    HeaderTop,
+    HeaderBottom,
+  },
   data() {
     return {
 
@@ -16,26 +22,15 @@ export default {
     <div class="bg-sliders">
       <div class="container">
         <!-- ROW TOP LINKS  -->
-        <div class="row">
-          <div class="col">
-            logo
-          </div>
-          <div class="col d-flex justify-content-end">
-            links
-          </div>
+        <div class="header_top">
+          <HeaderTop />
         </div>
+        <!-- END ROW TOP LINKS  -->
         <!-- ROW BOTTOM JUMBOTRON  -->
-        <div class="row">
-          <div class="col-1">
-            freccia 1
-          </div>
-          <div class="col">
-            cards
-          </div>
-          <div class="col-1">
-            freccia 2
-          </div>
+        <div class="header_bottom">
+          <HeaderBottom />
         </div>
+        <!-- END ROW BOTTOM JUMBOTRON  -->
       </div>
     </div>
     <!-- END - BG SLIDERS HEADER  -->
