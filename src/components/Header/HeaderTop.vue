@@ -54,12 +54,12 @@ export default {
                 </template>
                 <li class="align-self-center">
                     <button class="btn">
-                        cerca
+                        <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
                     </button>
                 </li>
                 <li class="align-self-center">
                     <button class="btn">
-                        menu
+                        <font-awesome-icon icon="fa-solid fa-bars" />
                     </button>
                 </li>
             </ul>

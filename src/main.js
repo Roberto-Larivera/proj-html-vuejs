@@ -10,9 +10,11 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 /* import specific icons */
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add(faArrowLeftLong,faArrowRightLong)
+library.add(faArrowLeftLong,faArrowRightLong,faBars,faMagnifyingGlass)
 
 
 createApp(App)
