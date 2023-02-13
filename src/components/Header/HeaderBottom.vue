@@ -1,9 +1,11 @@
 <script>
 import AllButton from '../All/AllButton.vue';
+import HeaderSlide from './HeaderSlide.vue';
 export default {
     name: 'HeaderBottom',
     components:{
         AllButton,
+        HeaderSlide,
     },
     data() {
         return {
@@ -17,25 +19,23 @@ export default {
 <template>
     <div class="row">
         <div class="col-1">
-            freccia 1
+            <font-awesome-icon icon="fa-solid fa-arrow-left-long" />
+
         </div>
         <div class="col-5">
-            <h1>
-                Our Team
-            </h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolores maiores totam assumenda necessitatibus cupiditate eos, alias libero unde odit!
-            </p>
+            <HeaderSlide />
             <div class="group_buttons d-flex flex-wrap gap-2">
                 <AllButton :text="'read more'"/>
                 <AllButton :text="'purchase'" :color="'tm_orange'"/>
             </div>
         </div>
         <div class="col-1 offset-5">
-            freccia 2
+            <font-awesome-icon icon="fa-solid fa-arrow-right-long" />
+
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
+
 </style>
