@@ -21,7 +21,7 @@ export default {
         <button class="p-2" :class="color">
             {{text}}
             <span>
-                freccia
+                <font-awesome-icon icon="fa-solid fa-arrow-right-long" />
             </span>
         </button>
     </div>
