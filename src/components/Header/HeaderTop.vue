@@ -50,12 +50,12 @@ export default {
                 </li>
                </template>
                <li class="align-self-center">
-                    <button>
+                    <button class="btn">
                         cerca
                     </button>
                 </li>
                 <li class="align-self-center">
-                    <button>
+                    <button class="btn">
                         menu
                     </button>
                 </li>
@@ -72,6 +72,7 @@ export default {
 
             a {
                 text-decoration: none;
+                text-transform: uppercase;
             }
         }
     }

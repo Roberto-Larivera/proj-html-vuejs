@@ -1,0 +1,55 @@
+<script>
+export default {
+    name: 'AllButton',
+    data() {
+        return {
+
+        }
+    },
+    props:{
+        color: String,
+        text: String
+
+    }
+    
+
+}
+</script>
+
+<template>
+    <div>
+        <button class="p-2" :class="color">
+            {{text}}
+            <span>
+                freccia
+            </span>
+        </button>
+    </div>
+</template>
+
+<style lang="scss" scoped>
+button{
+        background-color: $background_color-1;
+        color: $text_color-12;
+        border: none;
+        text-transform: uppercase;
+        font-size: .7rem;
+        span{
+            border-left: 1px solid $border_color-6;
+            padding-left: 10px;
+            margin-left: 20px;
+        }
+        &:hover span{
+            margin-left: 0;
+            margin-right: 20px;
+            border: none;
+        }
+        &.tm_orange{
+            background-color: $background_color-8;
+            color: $text_color-1;
+            span{
+                border-color: $border_color-1;
+            }
+        }
+    }
+</style>
