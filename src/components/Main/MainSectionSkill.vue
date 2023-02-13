@@ -1,12 +1,36 @@
 <script>
 import SectionTitle from '../All/SectionTitle.vue';
+import MainCard from './MainCard.vue';
 export default {
   name: 'MainSectionSkill',
-  components:{
+  components: {
+    MainCard,
     SectionTitle,
   },
   data() {
     return {
+      mainCardsLink: [
+        {
+          title: 'knowing',
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, nesciunt.',
+          src: 'svg-0.svg',
+        },
+        {
+          title: 'selling',
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, nesciunt.',
+          src: 'svg-1.svg',
+        },
+        {
+          title: 'Learning',
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, nesciunt.',
+          src: 'svg-2.svg',
+        },
+        {
+          title: 'contact',
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, nesciunt.',
+          src: 'svg-3.svg',
+        },
+      ]
     }
   }
 
@@ -16,33 +40,30 @@ export default {
 <template>
   <div>
     <div class="container">
-      <div class="box_bg">
-        <div class="row">
+      <div class="position-relative">
+        <div class="box_bg h-100 w-100 position-absolute"></div>
+        <div class="box_content">
+        <div class="row pb-5">
           <div class="col ">
             <SectionTitle 
             :section="'h2'" 
-            :sectionAlign="'center'" 
-            :description="'Lorem ipsum dolor sit amet consectetur adipisicing elit.'"
+            :sectionAlign="'center'"
+            :title="'our specialties'"
+            :description="'Lorem ipsum dolor sit amet consectetur adipisicing elit.'" 
             />
           </div>
         </div>
+
         <div class="row row-cols-4">
-          <div class="col">
-            <div class="my_card p-3">
-              <div class="my_card-img mb-4">
-                <img src="../../assets/svg/svg-0.svg" alt="">
-              </div>
-              <div class="my_card-text">
-                <h6>
-                  Title
-                </h6>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, nesciunt.
-                </p>
-              </div>
-            </div>
+          <div class="col" v-for="element in mainCardsLink">
+            <MainCard 
+            :title="element.title" 
+            :description="element.description" 
+            :srcImage="element.src" 
+            />
           </div>
         </div>
+      </div>
       </div>
     </div>
   </div>
@@ -50,14 +71,16 @@ export default {
 
 <style lang="scss" scoped>
 .box_bg{
+  top: -10%;
   background-color: $background_color-1;
+
 }
-.my_card{
-  text-align: center;
-  .my_card-text{
-    p{
-      font-size: 0.8rem;
-    }
-  }
+.box_content {
+  background-color: $background_color-1;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 10;
+
 }
 </style>
