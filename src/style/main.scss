@@ -14,4 +14,7 @@ h4,
 h5,
 h6{
     font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: $text_color-14;
+    text-transform: capitalize;
 }

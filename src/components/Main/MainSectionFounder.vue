@@ -15,10 +15,10 @@ export default {
 </script>
 
 <template>
-  <div>
-    <div class="container my-5 py-5">
+  <div class="">
+    <div class="container bg_section my-5 py-5">
 
-      <div class="bg_section d-flex justify-content-center align-atimes-center ">
+      <div class=" d-flex justify-content-center align-atimes-center ">
         <div class="row">
           <div class="col-10 offset-1">
             
@@ -49,7 +49,7 @@ export default {
   background-image: url(../../../public/svg/svg-4.svg);
   background-repeat: no-repeat;
   background-position: top right;
-  background-size: 25%;
+  background-size: 30%;
 }
 
 .box_content {

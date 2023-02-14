@@ -67,14 +67,14 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-h2,
-h1,
-h3,
-h4 {
-    font-weight: 700;
-    color: $text_color-14;
-    text-transform: capitalize;
-}
+// h1,
+// h2,
+// h3,
+// h4 {
+//     font-weight: 700;
+//     color: $text_color-14;
+//     text-transform: capitalize;
+// }
 
 .text_orange {
     color: $text_color-8;

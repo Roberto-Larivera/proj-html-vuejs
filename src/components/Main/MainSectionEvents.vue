@@ -47,38 +47,21 @@ export default {
             <div class="box-content w-100">
               <div class="content-left w-50">
 
-                <div class="card w-75">
-                  <div class="card-header">
+                <div class="card w-100 rounded-0">
+                  <div class="card-header p-3">
                     <h4>
                       Upcoming Events
                     </h4>
                   </div>
                   <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                      <MainMiniCard />
-                        <div class="min_card">
-                          <div class="min_card-left">
-                            #date
-                          </div>
-                          <div class="min_card-right">
-                            <h6>
-                              title
-                            </h6>
-                            <p>
-                              icona + testo
-                            </p>
-                            <p>
-                              icona + testo
-                            </p>
-                            <a href="#nogo">
-                              read more
-                            </a>
-                          </div>
-                        </div>
-                    
+                    <li class="list-group-item" v-for="element in mainCardsEvents">
+                      <MainMiniCard 
+                      :title="element.title"
+                      :date="element.date"
+                      :time="element.time"
+                      :address="element.address"
+                      />
                     </li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
                   </ul>
                 </div>
 
@@ -92,5 +75,16 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
+.card{
+  .card-header{
+    background-color: $background_color-6;
+  }
+  .list-group-item{
+    background-color: $background_color-6;
+    &.click{
+    background-color: $background_color-3;
+    border-color: none !important
+    }
+  }
+}
 </style>
