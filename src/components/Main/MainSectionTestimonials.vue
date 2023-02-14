@@ -1,9 +1,33 @@
 <script>
+import MainSpyScTestimonial from './MainSpyScTestimonial.vue'
 export default {
   name: 'MainSectionTestimonials',
+  components: {
+    MainSpyScTestimonial,
+  },
   data() {
     return {
+      mainTestimonialsList: [
+        {
+          name: 'cynthia clark',
+          comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores laborum adipisci molestiae, facilis quaerat deserunt eveniet alias non veniam?',
+          src: 'h3-img-04.png',
+          status: true
 
+        },
+        {
+          name: 'Firstname LastName',
+          comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores laborum adipisci molestiae,  non veniam?',
+          src: 'h3-img-07.png',
+          status: false
+        },
+        {
+          name: 'Firstname LastName',
+          comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores laborum adipisci molestiae...',
+          src: 'h3-img-08.png',
+          status: false
+        },
+      ]
     }
   }
 
@@ -27,18 +51,12 @@ export default {
             <div class="row h-100">
               <div class="col-6 offset-3 d-flex flex-column justify-content-center align-items-center h-100">
 
-                <div class="content-top d-flex flex-column align-items-center justify-content-center gap-3 w-100">
+                <template v-for="element in mainTestimonialsList">
 
-                  <img src="../../assets/img/h3-img-04.png" alt="">
-                  <h6>
-                    name
-                  </h6>
-                  <p>
-                    "Comment"
-                  </p>
+                  <MainSpyScTestimonial v-if="element.status" :src="element.src" :name="element.name" :comment="element.comment" />
 
 
-                </div>
+                </template>
                 <div class="content-bottom d-flex align-items-center justify-content-center w-100">
                   <span>
                     01
@@ -53,7 +71,6 @@ export default {
                     03
                   </span>
                 </div>
-
               </div>
             </div>
 
@@ -81,21 +98,6 @@ export default {
   color: $fill_color-2;
 
 }
-
-.content-top {
-
-  img {
-    width: 120px;
-    aspect-ratio: 1;
-  }
-
-  h6,
-  p {
-    @include pargh-title_default;
-    color: $text_color-2 ;
-  }
-}
-
 .content-bottom {
   span {
     color: $text_color-2;
