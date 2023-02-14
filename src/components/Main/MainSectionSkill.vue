@@ -42,17 +42,22 @@ export default {
     <div class="container">
       <div class="position-relative">
         <div class="box_bg h-100 w-100 position-absolute"></div>
-        <div class="box_content p-5">
-          <div class="row pb-5">
-            <div class="col ">
-              <SectionTitle :section="'h2'" :sectionAlign="'center'" :title="'our specialties'"
-                :description="'Lorem ipsum dolor sit amet consectetur adipisicing elit.'" />
-            </div>
-          </div>
+        <div class="row">
+          <div class="col-10 offset-1">
 
-          <div class="row row-cols-4">
-            <div class="col" v-for="element in mainCardsLink">
-              <MainCard :title="element.title" :description="element.description" :srcImage="element.src" />
+            <div class="box_content p-5">
+              <div class="row pb-5">
+                <div class="col ">
+                  <SectionTitle :section="'h2'" :sectionAlign="'center'" :title="'our specialties'"
+                    :description="'Lorem ipsum dolor sit amet consectetur adipisicing elit.'" />
+                </div>
+              </div>
+    
+              <div class="row row-cols-4">
+                <div class="col" v-for="element in mainCardsLink">
+                  <MainCard :title="element.title" :description="element.description" :srcImage="element.src" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -62,6 +67,12 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.container{
+  & > div{
+  background-color: $background_color-1;
+
+  }
+}
 .box_bg {
   top: -10%;
   background-color: $background_color-1;
@@ -69,7 +80,6 @@ export default {
 }
 
 .box_content {
-  background-color: $background_color-1;
   padding-top: 100px;
   padding-bottom: 100px;
   position: relative;
