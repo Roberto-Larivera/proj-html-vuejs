@@ -42,7 +42,7 @@ export default {
 </script>
 
 <template> 
-  <div class="p-5">
+  <div class="py-5">
     <div class="container position-relative">
       <div class="bg_plug w-100 position-absolute"></div>
 

@@ -4,6 +4,7 @@ import MainSectionFounder from './MainSectionFounder.vue'
 import MainSectionEvents from './MainSectionEvents.vue'
 import MainSectionCreativeLeader from './MainSectionCreativeLeader.vue' 
 import MainSectionLatestNews from './MainSectionLatestNews.vue' 
+import MainSectionTestimonials from './MainSectionTestimonials.vue' 
 export default {
   name: 'AppMain',
   components: {
@@ -12,6 +13,7 @@ export default {
     MainSectionEvents,
     MainSectionCreativeLeader,
     MainSectionLatestNews,
+    MainSectionTestimonials,
   },
   data() {
     return {
@@ -42,6 +44,10 @@ export default {
 
     <section id="section-latest_news">
       <MainSectionLatestNews />
+    </section>
+
+    <section id="section-testimonials">
+      <MainSectionTestimonials />
     </section>
   </main>
 </template>
