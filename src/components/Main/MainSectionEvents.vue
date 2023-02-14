@@ -1,9 +1,35 @@
 <script>
+import MainMiniCard from './MainMiniCard.vue'
 export default {
   name: 'MainSectionEvents',
+  components:{
+    MainMiniCard,
+  },
   data() {
     return {
-
+      mainCardsEvents:[
+        {
+          title: 'melbourne coaching',
+          date: 'Jan 7, 2022',
+          time:' 9:00 am - 5:00 pm',
+          address: 'Cambridge, MA 02138, USA',
+          url: '#nogo'
+        },
+        {
+          title: 'new york coaching',
+          date: 'Jan 7, 2022',
+          time:' 9:00 am - 5:00 pm',
+          address: 'Cambridge, MA 02138, USA',
+          url: '#nogo'
+        },
+        {
+          title: 'london coaching',
+          date: 'Jan 7, 2022',
+          time:' 9:00 am - 5:00 pm',
+          address: 'Cambridge, MA 02138, USA',
+          url: '#nogo'
+        },
+      ]
     }
   }
 
@@ -23,10 +49,34 @@ export default {
 
                 <div class="card w-75">
                   <div class="card-header">
-                    Featured
+                    <h4>
+                      Upcoming Events
+                    </h4>
                   </div>
                   <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">
+                      <MainMiniCard />
+                        <div class="min_card">
+                          <div class="min_card-left">
+                            #date
+                          </div>
+                          <div class="min_card-right">
+                            <h6>
+                              title
+                            </h6>
+                            <p>
+                              icona + testo
+                            </p>
+                            <p>
+                              icona + testo
+                            </p>
+                            <a href="#nogo">
+                              read more
+                            </a>
+                          </div>
+                        </div>
+                    
+                    </li>
                     <li class="list-group-item">A second item</li>
                     <li class="list-group-item">A third item</li>
                   </ul>
