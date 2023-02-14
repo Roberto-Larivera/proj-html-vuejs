@@ -19,7 +19,9 @@ export default {
 <template>
     <div class="row h-100 ">
         <div class="col-1 h-100 d-flex align-items-center">
-            <font-awesome-icon icon="fa-solid fa-arrow-left-long" />
+            <button class="btn rounded-circle">
+                <font-awesome-icon icon="fa-solid fa-arrow-left-long" />
+            </button>
 
         </div>
         <div class="col-5 h-100 d-flex flex-column justify-content-center">
@@ -33,12 +35,17 @@ export default {
             </div>
         </div>
         <div class="col-1 offset-5 h-100 d-flex align-items-center justify-content-end">
-            <font-awesome-icon icon="fa-solid fa-arrow-right-long" />
+            <button class="btn rounded-circle">
+                <font-awesome-icon icon="fa-solid fa-arrow-right-long" />
+            </button>
 
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
-
+.btn {
+    width: 50px;
+    aspect-ratio: 1;
+}
 </style>

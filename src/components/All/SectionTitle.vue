@@ -52,7 +52,16 @@ export default {
             <p>
                 {{ description }}
             </p>
-            <div class="line_twxt-orange"></div>
+            <div class="line_text-orange"></div>
+        </div>
+        <div v-else-if="section == 'h4'" :class="sectionAlign == 'center'? 'text-center d-flex flex-column align-items-center' : ''">
+            <h4>
+                {{ title }}<span class="text_orange">.</span>
+            </h4>
+            <p>
+                {{ description }}
+            </p>
+            <div class="line_text-orange"></div>
         </div>
     </div>
 </template>
@@ -60,7 +69,8 @@ export default {
 <style lang="scss" scoped>
 h2,
 h1,
-h3 {
+h3,
+h4 {
     font-weight: 700;
     color: $text_color-14;
     text-transform: capitalize;
@@ -74,7 +84,7 @@ p {
     color: $text_color-11;
     font-weight: 300;
 }
-.line_twxt-orange{
+.line_text-orange{
     width: 50px;
     border: 1px solid $border_color-5;
 }
