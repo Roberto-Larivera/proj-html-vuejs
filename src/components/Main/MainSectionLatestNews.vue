@@ -45,7 +45,7 @@ export default {
                   <div class="top-imgs d-flex flex-column position-relative">
                     <img src="../../assets/img/h1-img-01.jpg" alt="img-1">
                     <div class="text-bg text-center p-1 px-3 position-absolute d-flex align-items-center">
-                      <span class="me-2">
+                      <span class="me-1">
                         <font-awesome-icon icon="fa-solid fa-tag" />
                       </span>
                       <span>
@@ -56,36 +56,46 @@ export default {
                 </div>
 
                 <div class="content-bottom">
-                  <div>
+                  <div class="box-top">
+
                     <span>
                       <a href="#nogo">
-                        <span>
+                        <span class="me-1">
                           <font-awesome-icon icon="fa-regular fa-clock" />
                         </span>
                         data
                       </a>
                     </span>
+
                     <span>
                       <a href="#nogo">
-                        <span>
+                        <span class="me-1 ms-2">
                           <font-awesome-icon icon="fa-regular fa-user" />
                         </span>
                         data
                       </a>
                     </span>
-                  </div>
-                  <h5>
-                    Next Investment
-                  </h5>
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat amet, nam eaque facere assumenda
-                    quo.
-                  </p>
 
-                  <a href="#nogo">
-                    read more
-                  </a>
+                  </div>
+                  <div class="box-bottom">
+
+                    <h5>
+                      Next Investment
+                    </h5>
+
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat amet, nam eaque facere assumenda
+                      quo.
+                    </p>
+
+                    <a class="my_links" href="#nogo">
+                      read more
+                    </a>
+                  </div>
+
+
                 </div>
+
               </div>
             </div>
 
@@ -122,23 +132,31 @@ export default {
     font-weight: 300;
     font-size: 0.7rem;
     text-transform: capitalize;
-    
+
 
   }
 }
 
 .content-bottom {
-  p {
-    @include pargh_default;
-  }
-  
-  a {
-    @include link_default;
-    text-transform: capitalize
-  }
-  span{
-    a{
+  .box-top {
+    a {
       @include pargh-card_default;
+      text-decoration: none;
+
+      span {
+        color: $text_color-8;
+      }
+    }
+  }
+
+  .box-bottom {
+
+    p {
+      @include pargh_default;
+    }
+
+    a.my_links {
+      @include link_default;
     }
   }
 }
