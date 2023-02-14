@@ -51,7 +51,8 @@ export default {
   text-align: center;
   .my_card-text{
     p{
-      font-size: 0.8rem;
+      @include pargh_default;
+
     }
   }
 }

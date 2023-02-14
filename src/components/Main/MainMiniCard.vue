@@ -88,9 +88,7 @@ export default {
   }
 }
 p {
-  color: $text_color-11;
-  font-weight: 300;
-  font-size: 0.8rem;
+  @include pargh-card_default;
   .fa-clock,
   .fa-location-dot{
     color: $text_color-8;
@@ -99,11 +97,8 @@ p {
 }
 
 a {
-  text-decoration: none;
-  color: $text_color-11;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: .8rem;
+  @include link_default;
+
 
 
 }

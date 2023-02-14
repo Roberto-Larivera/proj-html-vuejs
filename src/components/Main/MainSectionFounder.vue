@@ -67,9 +67,7 @@ export default {
     right: 0;
 
     p {
-      font-weight: 300;
-      color: $text_color-11;
-      font-size: .8rem;
+      @include pargh_default;
 
     }
 

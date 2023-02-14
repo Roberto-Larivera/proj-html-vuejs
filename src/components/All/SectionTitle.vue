@@ -47,8 +47,9 @@ export default {
             <p v-if="descriptionBoll">
                 {{ description }}
             </p>
-            <div class="line_twxt-orange"></div>
+            <div class="line_text-orange"></div>
         </div>
+
         <div v-else-if="section == 'h3'" :class="sectionAlign == 'center'? 'text-center d-flex flex-column align-items-center' : ''">
             <h3>
                 {{ title }}<span class="text_orange">.</span>
@@ -58,6 +59,7 @@ export default {
             </p>
             <div class="line_text-orange"></div>
         </div>
+
         <div v-else-if="section == 'h4'" :class="sectionAlign == 'center'? 'text-center d-flex flex-column align-items-center' : ''">
             <h4>
                 {{ title }}<span class="text_orange">.</span>
@@ -85,8 +87,8 @@ export default {
 }
 
 p {
-    color: $text_color-11;
-    font-weight: 300;
+    @include pargh-title_default;
+
 }
 .line_text-orange{
     width: 50px;

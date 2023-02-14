@@ -1,0 +1,23 @@
+@mixin link_default {
+    text-decoration: none;
+    color: $text_color-11;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .8rem;
+}
+
+@mixin pargh-title_default {
+    font-weight: 300;
+    color: $text_color-11;
+    font-size: 1rem;
+}
+@mixin pargh_default {
+    font-weight: 300;
+    color: $text_color-11;
+    font-size: .9rem;
+}
+@mixin pargh-card_default {
+    color: $text_color-11;
+    font-weight: 300;
+    font-size: 0.8rem;
+}
