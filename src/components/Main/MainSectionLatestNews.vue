@@ -1,25 +1,53 @@
 <script>
 import SectionTitle from '../All/SectionTitle.vue';
+import MainCardScLatestNews from './MainCardScLatestNews.vue'
 export default {
   name: 'MainSectionLatestNews',
   components: {
     SectionTitle,
+    MainCardScLatestNews,
   },
   data() {
     return {
+      mainLatestNewsList:[
+        {
+          tag:'business, Leading' ,
+          date: 'May 5,2019',
+          author: 'amanda doe',
+          title: 'next investment',
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A, non?...',
+          url:'#nogo',
+        },
+        {
+          tag:'business, Leading' ,
+          date: 'May 5,2019',
+          author: 'amanda doe',
+          title: 'team building',
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A, non?...',
+          url:'#nogo',
+        },
+        {
+          tag:'business, Leading' ,
+          date: 'May 5,2019',
+          author: 'amanda doe',
+          title: 'new business day',
+          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A, non?...',
+          url:'#nogo',
+        },
+      ]
     }
   }
 
 }
 </script>
 
-<template>
+<template> 
   <div class="bg_plug p-5">
     <div class="container">
 
       <div class="w-100 py-5">
 
-        <div class="row">
+        <div class="row mb-5">
           <div class="col ">
 
             <SectionTitle :title="'Latest news'"
@@ -31,76 +59,32 @@ export default {
 
         <div class="row">
 
-          <div class="col 1">
+          <div class="col d-flex justify-content-center align-items-center">
             <button class="btn rounded-circle">
               <font-awesome-icon icon="fa-solid fa-arrow-left-long" />
             </button>
           </div>
 
           <div class="col-10">
-            <div class="row row-cols-3">
-              <div class="col">
-                <div class="content-top w-100 mb-4">
+            <div class="row row-cols-3 flex-nowrap">
 
-                  <div class="top-imgs d-flex flex-column position-relative">
-                    <img src="../../assets/img/h1-img-01.jpg" alt="img-1">
-                    <div class="text-bg text-center p-1 px-3 position-absolute d-flex align-items-center">
-                      <span class="me-1">
-                        <font-awesome-icon icon="fa-solid fa-tag" />
-                      </span>
-                      <span>
-                        lollo
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="content-bottom">
-                  <div class="box-top">
-
-                    <span>
-                      <a href="#nogo">
-                        <span class="me-1">
-                          <font-awesome-icon icon="fa-regular fa-clock" />
-                        </span>
-                        data
-                      </a>
-                    </span>
-
-                    <span>
-                      <a href="#nogo">
-                        <span class="me-1 ms-2">
-                          <font-awesome-icon icon="fa-regular fa-user" />
-                        </span>
-                        data
-                      </a>
-                    </span>
-
-                  </div>
-                  <div class="box-bottom">
-
-                    <h5>
-                      Next Investment
-                    </h5>
-
-                    <p>
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat amet, nam eaque facere assumenda
-                      quo.
-                    </p>
-
-                    <a class="my_links" href="#nogo">
-                      read more
-                    </a>
-                  </div>
-
-
-                </div>
+              <div class="col" v-for="element in mainLatestNewsList">
+                
+                <MainCardScLatestNews
+                  :tag="element.tag"
+                  :date="element.date"
+                  :author="element.author"
+                  :title="element.title"
+                  :description="element.description"    
+                  :url="element.url"    
+                />
 
               </div>
+
             </div>
 
           </div>
-          <div class="col 1">
+          <div class="col d-flex justify-content-center align-items-center">
             <button class="btn rounded-circle">
               <font-awesome-icon icon="fa-solid fa-arrow-right-long" />
             </button>
@@ -119,45 +103,5 @@ export default {
 .btn {
   @include btn-carousel-default;
 
-}
-
-.text-bg {
-  background-color: $background_color-8;
-
-  right: 10px;
-  bottom: -10px;
-
-  span {
-    color: $text_color-3;
-    font-weight: 300;
-    font-size: 0.7rem;
-    text-transform: capitalize;
-
-
-  }
-}
-
-.content-bottom {
-  .box-top {
-    a {
-      @include pargh-card_default;
-      text-decoration: none;
-
-      span {
-        color: $text_color-8;
-      }
-    }
-  }
-
-  .box-bottom {
-
-    p {
-      @include pargh_default;
-    }
-
-    a.my_links {
-      @include link_default;
-    }
-  }
 }
 </style>
