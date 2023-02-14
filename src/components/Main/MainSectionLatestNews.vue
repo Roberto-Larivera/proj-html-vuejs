@@ -42,8 +42,9 @@ export default {
 </script>
 
 <template> 
-  <div class="bg_plug p-5">
-    <div class="container">
+  <div class="p-5">
+    <div class="container position-relative">
+      <div class="bg_plug w-100 position-absolute"></div>
 
       <div class="w-100 py-5">
 
@@ -95,11 +96,22 @@ export default {
 
       </div>
 
+    
+
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+.bg_plug{
+  background-image: url(../../../public/svg/svg-4.svg);
+  background-repeat: no-repeat;
+  background-position: top left ;
+  background-size: 30%;
+  height: 500px;
+  left: 0;
+  top: -20%;
+}
 .btn {
   @include btn-carousel-default;
 

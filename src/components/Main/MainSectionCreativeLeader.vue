@@ -73,6 +73,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.bg_plug{
+  background-color: $background_color-1;
+}
 .section-left{
   p {
   @include pargh_default;
