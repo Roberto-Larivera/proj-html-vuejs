@@ -19,10 +19,10 @@ export default {
 
       <span class="position-absolute top-50 start-50 translate-middle">
         <button class="btn rounded-circle">
-        <span class="d-flex align-items-center justify-content-center">
-          <font-awesome-icon icon="fa-solid fa-play" />
-        </span>
-      </button>
+          <span class="d-flex align-items-center justify-content-center">
+            <font-awesome-icon icon="fa-solid fa-play" />
+          </span>
+        </button>
       </span>
 
     </div>
@@ -39,7 +39,7 @@ export default {
     font-size: 3em;
     width: 80px;
     aspect-ratio: 1;
-    
+
   }
 }
 </style>
