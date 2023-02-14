@@ -1,11 +1,13 @@
 <script>
 import MainSectionSkill from './MainSectionSkill.vue'
 import MainSectionFounder from './MainSectionFounder.vue'
+import MainSectionEvents from './MainSectionEvents.vue'
 export default {
   name: 'AppMain',
   components: {
     MainSectionSkill,
     MainSectionFounder,
+    MainSectionEvents,
   },
   data() {
     return {
@@ -24,6 +26,10 @@ export default {
 
     <section id="section_founder">
       <MainSectionFounder />
+    </section>
+
+    <section id="section-events">
+      <MainSectionEvents />
     </section>
   </main>
 </template>
