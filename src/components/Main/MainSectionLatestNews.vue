@@ -111,6 +111,7 @@ export default {
   height: 500px;
   left: 0;
   top: -20%;
+  pointer-events: none;
 }
 .btn {
   @include btn-carousel-default;

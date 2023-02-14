@@ -5,6 +5,7 @@ import MainSectionEvents from './MainSectionEvents.vue'
 import MainSectionCreativeLeader from './MainSectionCreativeLeader.vue' 
 import MainSectionLatestNews from './MainSectionLatestNews.vue' 
 import MainSectionTestimonials from './MainSectionTestimonials.vue' 
+import MainSectionVideo from './MainSectionVideo.vue' 
 export default {
   name: 'AppMain',
   components: {
@@ -14,6 +15,7 @@ export default {
     MainSectionCreativeLeader,
     MainSectionLatestNews,
     MainSectionTestimonials,
+    MainSectionVideo,
   },
   data() {
     return {
@@ -48,6 +50,10 @@ export default {
 
     <section id="section-testimonials">
       <MainSectionTestimonials />
+    </section>
+
+    <section id="section-video">
+      <MainSectionVideo />
     </section>
   </main>
 </template>
