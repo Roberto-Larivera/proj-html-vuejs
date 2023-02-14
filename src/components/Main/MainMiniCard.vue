@@ -37,7 +37,7 @@ export default {
   <div>
     <div class="min_card d-flex p-3">
       <div class="min_card-left">
-        <div class="date  w-100 text-center p-1">
+        <div class="date  w-100 text-center p-1 px-3">
           <div>{{date}}</div>
           <span>{{date}}</span>
         </div>

@@ -45,7 +45,6 @@ export default {
 
 <style lang="scss" scoped>
 .btn {
-    width: 50px;
-    aspect-ratio: 1;
+    @include btn-carousel-default;
 }
 </style>
