@@ -24,6 +24,7 @@ dist-ssr
 *.sw?
 
 # Personal
-./src/components/Template
-./src/assets/Diagrams/*.bkp
-./src/assets/Diagrams/*.dtmp
+src/components/Template
+src/assets/Diagrams/*.bkp
+src/assets/Diagrams/*.dtmp
+src/assets/fonts/*
