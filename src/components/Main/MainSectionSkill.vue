@@ -39,7 +39,7 @@ export default {
 
 <template>
   <div>
-    <div class="container">
+    <div class="container mb-5">
       <div class="position-relative">
         <div class="box_bg h-100 w-100 position-absolute"></div>
         <div class="row">

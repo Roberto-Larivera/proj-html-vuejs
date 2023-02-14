@@ -16,13 +16,13 @@ export default {
 
 <template>
   <div>
-    <div class="container my-5">
+    <div class="container my-5 py-5">
 
-      <div class="bg_section d-flex justify-content-center align-atimes-center p-5 ">
+      <div class="bg_section d-flex justify-content-center align-atimes-center ">
         <div class="row">
           <div class="col-10 offset-1">
             
-            <div class="box_content d-flex align-items-center w-100 h-100 p-5 position-relative">
+            <div class="box_content d-flex align-items-center w-100 h-100 position-relative">
               <div class="content-left h-100">
                 <img class="w-100" src="../../assets/img/h1-blog-img-04.jpg" alt="section-founder">
               </div>
