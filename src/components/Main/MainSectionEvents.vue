@@ -2,30 +2,30 @@
 import MainMiniCard from './MainMiniCard.vue'
 export default {
   name: 'MainSectionEvents',
-  components:{
+  components: {
     MainMiniCard,
   },
   data() {
     return {
-      mainCardsEvents:[
+      mainCardsEvents: [
         {
           title: 'melbourne coaching',
           date: 'Jan 7, 2022',
-          time:' 9:00 am - 5:00 pm',
+          time: ' 9:00 am - 5:00 pm',
           address: 'Cambridge, MA 02138, USA',
           url: '#nogo'
         },
         {
           title: 'new york coaching',
           date: 'Jan 7, 2022',
-          time:' 9:00 am - 5:00 pm',
+          time: ' 9:00 am - 5:00 pm',
           address: 'Cambridge, MA 02138, USA',
           url: '#nogo'
         },
         {
           title: 'london coaching',
           date: 'Jan 7, 2022',
-          time:' 9:00 am - 5:00 pm',
+          time: ' 9:00 am - 5:00 pm',
           address: 'Cambridge, MA 02138, USA',
           url: '#nogo'
         },
@@ -55,12 +55,8 @@ export default {
                   </div>
                   <ul class="my_list-group p-0">
                     <li class="my_list-group-item p-3" v-for="element in mainCardsEvents">
-                      <MainMiniCard 
-                      :title="element.title"
-                      :date="element.date"
-                      :time="element.time"
-                      :address="element.address"
-                      />
+                      <MainMiniCard :title="element.title" :date="element.date" :time="element.time"
+                        :address="element.address" />
                     </li>
                   </ul>
                 </div>
@@ -75,28 +71,30 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.bg_plug{
+.bg_plug {
   background-image: url('../../assets/img/h1-img-09.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
-.my_card{
+
+.my_card {
   background-color: $background_color-6;
 
-  .my_card-header{
+  .my_card-header {
     background-color: $background_color-6;
     box-shadow: 0px 7px 10px 0px $border_color-3;
     position: relative;
     z-index: 2;
   }
 
-  .my_list-group-item{
+  .my_list-group-item {
     background-color: $background_color-6;
     list-style-type: none;
     border-bottom: 1px solid $border_color-3;
-    &.click{
-    background-color: $background_color-3;
-    border-color: none !important
+
+    &.click {
+      background-color: $background_color-3;
+      border-color: none !important
     }
   }
 }

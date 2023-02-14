@@ -2,12 +2,14 @@
 import MainSectionSkill from './MainSectionSkill.vue'
 import MainSectionFounder from './MainSectionFounder.vue'
 import MainSectionEvents from './MainSectionEvents.vue'
+import MainSectionCreativeLeader from './MainSectionCreativeLeader.vue' 
 export default {
   name: 'AppMain',
   components: {
     MainSectionSkill,
     MainSectionFounder,
     MainSectionEvents,
+    MainSectionCreativeLeader,
   },
   data() {
     return {
@@ -30,6 +32,10 @@ export default {
 
     <section id="section-events">
       <MainSectionEvents />
+    </section>
+
+    <section id="section-creative_leader">
+      <MainSectionCreativeLeader />
     </section>
   </main>
 </template>

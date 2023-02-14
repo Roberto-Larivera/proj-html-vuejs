@@ -20,6 +20,10 @@ export default {
         },
         section: String,
         sectionAlign: String,
+        descriptionBoll:{
+            type: Boolean,
+            default: true
+        }
     }
 
 }
@@ -31,7 +35,7 @@ export default {
             <h1>
                 {{ title }}<span class="text_orange">.</span>
             </h1>
-            <p>
+            <p v-if="descriptionBoll">
                 {{ description }}
             </p>
         </div>
@@ -40,7 +44,7 @@ export default {
             <h2>
                 {{ title }}<span class="text_orange">.</span>
             </h2>
-            <p>
+            <p v-if="descriptionBoll">
                 {{ description }}
             </p>
             <div class="line_twxt-orange"></div>
@@ -49,7 +53,7 @@ export default {
             <h3>
                 {{ title }}<span class="text_orange">.</span>
             </h3>
-            <p>
+            <p v-if="descriptionBoll">
                 {{ description }}
             </p>
             <div class="line_text-orange"></div>
@@ -58,7 +62,7 @@ export default {
             <h4>
                 {{ title }}<span class="text_orange">.</span>
             </h4>
-            <p>
+            <p v-if="descriptionBoll">
                 {{ description }}
             </p>
             <div class="line_text-orange"></div>
