@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-  <div class="">
+  <div>
     <div class="container bg_section my-5 py-5">
 
       <div class=" d-flex justify-content-center align-atimes-center ">

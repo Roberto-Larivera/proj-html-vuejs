@@ -37,24 +37,24 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="bg_plug p-5">
     <div class="container">
 
-      <div class="w-100">
+      <div class="w-100 py-5">
         <div class="row">
           <div class="col-10 offset-1">
 
             <div class="box-content w-100">
               <div class="content-left w-50">
 
-                <div class="card w-100 rounded-0">
-                  <div class="card-header p-3">
+                <div class="my_card w-100">
+                  <div class="my_card-header p-4 w-100">
                     <h4>
                       Upcoming Events
                     </h4>
                   </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item" v-for="element in mainCardsEvents">
+                  <ul class="my_list-group p-0">
+                    <li class="my_list-group-item p-3" v-for="element in mainCardsEvents">
                       <MainMiniCard 
                       :title="element.title"
                       :date="element.date"
@@ -75,12 +75,25 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.card{
-  .card-header{
+.bg_plug{
+  background-image: url('../../assets/img/h1-img-09.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.my_card{
+  background-color: $background_color-6;
+
+  .my_card-header{
     background-color: $background_color-6;
+    box-shadow: 0px 7px 10px 0px $border_color-3;
+    position: relative;
+    z-index: 2;
   }
-  .list-group-item{
+
+  .my_list-group-item{
     background-color: $background_color-6;
+    list-style-type: none;
+    border-bottom: 1px solid $border_color-3;
     &.click{
     background-color: $background_color-3;
     border-color: none !important

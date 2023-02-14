@@ -36,13 +36,13 @@ export default {
 <template>
   <div>
     <div class="min_card d-flex p-3">
-      <div class="min_card-left w-25">
+      <div class="min_card-left">
         <div class="date  w-100 text-center p-1">
           <div>{{date}}</div>
           <span>{{date}}</span>
         </div>
       </div>
-      <div class="min_card-right w-50 ms-3">
+      <div class="min_card-right ms-3">
         <h6>
           {{title}}
         </h6>
