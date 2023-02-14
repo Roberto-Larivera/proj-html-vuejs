@@ -1,13 +1,32 @@
 <script>
 import SectionTitle from '../All/SectionTitle.vue';
+import MainPercentage from './MainPercentage.vue';
 export default {
   name: 'MainSectionCreativeLeader',
   components: {
     SectionTitle,
+    MainPercentage,
   },
   data() {
     return {
-      
+      mainCreativeList:[
+        {
+          title: 'mentorship',
+          percentage: 78,
+        },
+        {
+          title: 'education',
+          percentage: 95,
+        },
+        {
+          title: 'learning',
+          percentage: 65,
+        },
+        {
+          title: 'motivation',
+          percentage: 83,
+        },
+      ]
     }
   }
 
@@ -37,20 +56,14 @@ export default {
           </div>
           <div class="col-5 p-3">
             <div class="section-right">
-              <div class="my_row">
-                <div class="text d-flex justify-content-between">
-                  <h6>
-                    title
-                  </h6>
-                  <span>
-                    0%
-                  </span>
-                </div>
-                <div class="bar-live w-100 position-relative">
-                  <div class="bar-active position-absolute"></div>
-                  <div class="bar-border"></div>
-                </div>
-              </div>
+
+              <MainPercentage 
+                v-for="element in mainCreativeList"
+                :title="element.title"
+                :percentage="element.percentage"
+              />
+
+              
             </div>
           </div>
         </div>
@@ -68,19 +81,5 @@ export default {
 a {
   @include link_default;
 }
-}
-.section-right{
-  .bar-live{
-    .bar-active{
-      height: 3px;
-      background-color: $fill_color-3;
-      left: 0;
-      top: -1px;
-    }
-    .bar-border{
-      border: 1px solid $border_color-4;
-    }
-    
-  }
 }
 </style>
