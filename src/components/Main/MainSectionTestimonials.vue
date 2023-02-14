@@ -22,37 +22,39 @@ export default {
             </button>
 
           </div>
-          <div class="col-10 d-flex justify-content-center align-items-center h-100 h-100">
+          <div class="col-10 ">
 
-            <div>
+            <div class="row h-100">
+              <div class="col-6 offset-3 d-flex flex-column justify-content-center align-items-center h-100">
 
-              <div class="content-top d-flex flex-column align-items-center justify-content-center gap-3">
+                <div class="content-top d-flex flex-column align-items-center justify-content-center gap-3 w-100">
 
-                <img src="../../assets/img/h3-img-04.png" alt="">
-                <h6>
-                  name
-                </h6>
-                <p>
-                  "Comment"
-                </p>
+                  <img src="../../assets/img/h3-img-04.png" alt="">
+                  <h6>
+                    name
+                  </h6>
+                  <p>
+                    "Comment"
+                  </p>
 
-
-              </div>
-              <div class="content-bottom d-flex align-items-center justify-content-center ">
-                <span>
-                  01
-                </span>
-                <div class="bar-live w-100 position-relative">
-                  <div class="bar-active position-absolute"></div>
-
-                  <div class="bar-border"></div>
 
                 </div>
-                <span>
-                  03
-                </span>
-              </div>
+                <div class="content-bottom d-flex align-items-center justify-content-center w-100">
+                  <span>
+                    01
+                  </span>
+                  <div class="bar-live w-50 position-relative">
+                    <div class="bar-active position-absolute" :style="`width: ${percentage}%`"></div>
 
+                    <div class="bar-border"></div>
+
+                  </div>
+                  <span>
+                    03
+                  </span>
+                </div>
+
+              </div>
             </div>
 
           </div>
@@ -83,7 +85,7 @@ export default {
 .content-top {
 
   img {
-    width: 100px;
+    width: 120px;
     aspect-ratio: 1;
   }
 
@@ -95,22 +97,24 @@ export default {
 }
 
 .content-bottom {
-  span{
+  span {
     color: $text_color-2;
     font-size: .7rem;
     padding: 5px;
   }
-  .bar-live{
-    .bar-active{
+
+  .bar-live {
+    .bar-active {
       height: 3px;
       background-color: $fill_color-1;
       left: 0;
       top: -1px;
     }
-    .bar-border{
+
+    .bar-border {
       border: .5px solid $border_color-4;
     }
-    
+
   }
 }
 </style>
