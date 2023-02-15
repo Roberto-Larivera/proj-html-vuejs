@@ -29,23 +29,23 @@ export default {
               <div class="w-100 h-100 position-absolute top-50 start-50 translate-middle">
 
                 <span id="icon_plus-1" class="icon_plus p-2 position-absolute">
-                <font-awesome-icon icon="fa-solid fa-circle-plus" />
-                <div class="box-info p-3">
-                  <h6>
-                    Lorem ipsum
-                  </h6>
-                  <a class="my_links" href="#nogo">
-                    read more
-                </a>
-                </div>
+                  <font-awesome-icon icon="fa-solid fa-circle-plus" />
+                  <div class="box-info p-3">
+                    <h6>
+                      Lorem ipsum
+                    </h6>
+                    <a class="my_links" href="#nogo">
+                      read more
+                    </a>
+                  </div>
                 </span>
 
                 <span id="icon_plus-2" class="icon_plus p-2 position-absolute">
-                <font-awesome-icon icon="fa-solid fa-circle-plus" />
+                  <font-awesome-icon icon="fa-solid fa-circle-plus" />
                 </span>
 
                 <span id="icon_plus-3" class="icon_plus p-2 position-absolute">
-                <font-awesome-icon icon="fa-solid fa-circle-plus" />
+                  <font-awesome-icon icon="fa-solid fa-circle-plus" />
                 </span>
 
               </div>
@@ -77,33 +77,38 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.content-left{
-  .icon_plus{
+.content-left {
+  .icon_plus {
     color: $text_color-8;
     font-size: 1rem;
-    &#icon_plus-1{
+
+    &#icon_plus-1 {
       top: 30%;
       left: 23%;
     }
-    &#icon_plus-2{
+
+    &#icon_plus-2 {
       top: 24%;
       left: 48%;
     }
-    &#icon_plus-3{
+
+    &#icon_plus-3 {
       top: 63%;
       left: 76%;
     }
-    .box-info{
+
+    .box-info {
       background-color: $background_color-1;
 
       box-shadow: 0px 0px 17px 0px $background_color-11;
 
       a.my_links {
-              @include link_default;
-          }
+        @include link_default;
+      }
     }
   }
 }
+
 .my_input {
   background-color: $background_color-5;
   border: none;
