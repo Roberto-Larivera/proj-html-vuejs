@@ -37,7 +37,7 @@ export default {
 </script>
 
 <template>
-  <div class="bg_plug p-5">
+  <div class="bg_plug py-5">
     <div class="container">
 
       <div class="w-100 py-5">
