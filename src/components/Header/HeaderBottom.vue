@@ -28,7 +28,8 @@ export default {
             <SectionTitle 
             :section="'h1'"
             :title="'our team'" 
-            />
+            :description="'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, consequuntur nam harum quam fuga optio!'"
+            /> 
             <div class="group_buttons d-flex flex-wrap gap-5">
                 <AllButton :text="'read more'"/>
                 <AllButton :text="'purchase'" :color="'tm_orange'"/>
