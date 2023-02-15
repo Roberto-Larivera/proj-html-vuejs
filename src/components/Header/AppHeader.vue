@@ -11,11 +11,19 @@ export default {
   data() {
     return {
       store,
+      headerBottomList: [
+        {
+          imgSrc: 'rev-slider-main-home-img-03.jpg'
+        },
+        {
+          imgSrc: 'rev-slider-main-home-img-02.jpg'
+        },
+      ],
     }
   },
   methods: {
     getImagePath(imgPath) {
-      return new URL(imgPath, import.meta.url).href;
+      return new URL(imgPath, import.meta.url).url;
     },
     srcImage() {
       // let gigi = `/img/${this.store.headerBottomList[this.store.headerBottomCurrent].imgSrc}`

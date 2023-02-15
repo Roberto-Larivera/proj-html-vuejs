@@ -59,6 +59,7 @@ export default {
                         :address="element.address" />
                     </li>
                   </ul>
+                  
                 </div>
 
               </div>
@@ -92,9 +93,8 @@ export default {
     list-style-type: none;
     border-bottom: 1px solid $border_color-3;
 
-    &.click {
-      background-color: $background_color-3;
-      border-color: none !important
+    &:hover {
+      background-color: $background_color-1;
     }
   }
 }

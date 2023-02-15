@@ -4,6 +4,11 @@
     text-transform: uppercase;
     font-weight: 700;
     font-size: .8rem;
+
+    &:hover {
+        color: $text_color-8;
+
+    }
 }
 
 @mixin pargh-title_default {
@@ -33,7 +38,8 @@
 @mixin btn-carousel-default {
     width: 50px;
     aspect-ratio: 1;
-    &:hover{
+
+    &:hover {
         color: $text_color-8 !important;
     }
 }
