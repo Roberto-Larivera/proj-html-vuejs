@@ -82,6 +82,9 @@ export default {
 
                 }
             }
+            &:hover .btn{
+                color:$text_color-8;
+            }
 
             &.list_link {
 

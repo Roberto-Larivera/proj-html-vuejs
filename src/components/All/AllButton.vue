@@ -29,6 +29,10 @@ export default {
 
 <style lang="scss" scoped>
 button{
+    box-shadow: 5px 5px 15px -7px $background_color-16;
+    &:hover {
+        box-shadow: 5px 5px 15px -7px $background_color-1;
+    }
         background-color: $background_color-1;
         color: $text_color-12;
         border: none;
@@ -45,6 +49,9 @@ button{
             border: none;
         }
         &.tm_orange{
+            &:hover{
+                box-shadow: 5px 5px 15px -7px $background_color-8;
+            }
             background-color: $background_color-8;
             color: $text_color-1;
             span{

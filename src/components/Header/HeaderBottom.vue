@@ -78,5 +78,6 @@ export default {
 <style lang="scss" scoped>
 .btn {
     @include btn-carousel-default;
+    
 }
 </style>
