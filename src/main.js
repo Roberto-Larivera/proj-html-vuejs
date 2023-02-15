@@ -17,6 +17,7 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { faTag } from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-regular-svg-icons'
 import { faPlay } from '@fortawesome/free-solid-svg-icons'
+import { faCirclePlus } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
 library.add(
@@ -28,7 +29,8 @@ library.add(
     faLocationDot,
     faTag,
     faUser,
-    faPlay
+    faPlay,
+    faCirclePlus
     )
 
 
