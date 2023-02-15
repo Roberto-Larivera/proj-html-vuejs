@@ -67,7 +67,7 @@ export default {
                     01
                   </span>
                   <div class="bar-live w-50 position-relative">
-                    <div class="bar-active position-absolute" :style="`width: ${percentage}%`"></div>
+                    <!-- <div class="bar-active position-absolute" :style="`width: ${percentage}%`"></div> -->
 
                     <div class="bar-border"></div>
 
