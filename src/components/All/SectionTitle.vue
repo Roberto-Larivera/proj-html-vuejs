@@ -69,6 +69,16 @@ export default {
             </p>
             <div class="line_text-orange"></div>
         </div>
+
+        <div v-else-if="section == 'h6'" :class="sectionAlign == 'center'? 'text-center d-flex flex-column align-items-center' : ''">
+            <h6>
+                {{ title }}<span class="text_orange">.</span>
+            </h6>
+            <p v-if="descriptionBoll">
+                {{ description }}
+            </p>
+            <div class="line_text-orange"></div>
+        </div>
     </div>
 </template>
 
@@ -81,7 +91,10 @@ export default {
 //     color: $text_color-14;
 //     text-transform: capitalize;
 // }
+h6{
+    color:$text_color-1;
 
+}
 .text_orange {
     color: $text_color-8;
 }

@@ -24,6 +24,12 @@
     font-size: 0.8rem;
 }
 
+@mixin text-list_default {
+    color: $text_color-6;
+    font-weight: 300;
+    font-size: 0.7rem;
+}
+
 @mixin btn-carousel-default {
     width: 50px;
     aspect-ratio: 1;
