@@ -240,9 +240,10 @@ export default {
     border-bottom: 1px solid $border_color-4;
     color: $background_color-1;
     font-family: 'Playfair Display', serif;
+    font-size: .8rem;
 
     &.-sub{
-      font-size: .7rem;
+      font-size: .6rem;
       font-family: 'Lato', sans-serif;
     }
 

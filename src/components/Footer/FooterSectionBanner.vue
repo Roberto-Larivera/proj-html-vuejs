@@ -1,17 +1,16 @@
 <script>
 export default {
   name: 'FooterSectionBanner',
-  data(){
-    return{
+  data() {
+    return {
 
     }
   }
-  
 }
 </script>
 
 <template>
- <div class="bg_plug py-1">
+  <div class="bg_plug py-1">
     <div class="container">
 
       <div class="row p-1">
@@ -27,9 +26,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.bg_plug{
+.bg_plug {
   background-color: $background_color-8;
-  p{
+
+  p {
     color: $text_color-1;
     font-weight: 300;
     font-size: .7rem;
