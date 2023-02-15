@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     getImagePath(imgPath) {
-      return new URL(imgPath, import.meta.url).url;
+      return new URL(imgPath, import.meta.url).href;
     },
     srcImage() {
       // let gigi = `/img/${this.store.headerBottomList[this.store.headerBottomCurrent].imgSrc}`

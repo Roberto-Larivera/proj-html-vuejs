@@ -12,22 +12,22 @@ export default {
       mainCardsLink: [
         {
           title: 'knowing',
-          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, nesciunt.',
+          description: 'Lorem ipsum dolor sit amet consectetur.',
           src: 'svg-0.svg',
         },
         {
           title: 'selling',
-          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, nesciunt.',
+          description: 'Lorem ipsum dolor sit amet consectetur.',
           src: 'svg-1.svg',
         },
         {
           title: 'Learning',
-          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, nesciunt.',
+          description: 'Lorem ipsum dolor sit amet consectetur.',
           src: 'svg-2.svg',
         },
         {
           title: 'contact',
-          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, nesciunt.',
+          description: 'Lorem ipsum dolor sit amet consectetur.',
           src: 'svg-3.svg',
         },
       ]
