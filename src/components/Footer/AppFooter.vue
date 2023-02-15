@@ -1,6 +1,10 @@
 <script>
+import FooterSectionLinks from './FooterSectionLinks.vue'
 export default {
   name: 'AppFooter',
+  components:{
+    FooterSectionLinks
+  },
   data(){
     return{
 
@@ -12,7 +16,9 @@ export default {
 
 <template>
   <footer>
-    AppFooter
+    <section id="section_links">
+      <FooterSectionLinks />
+    </section>
   </footer>
 </template>
 
