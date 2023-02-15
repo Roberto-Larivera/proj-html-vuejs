@@ -13,7 +13,7 @@ export default {
     percentage: Number,
   },
   methods:{
-    getImahePath(imgPath){
+    getImagePath(imgPath){
       return new URL( imgPath, import.meta.url).href;
     }
   }
@@ -25,7 +25,7 @@ export default {
   <div>
     <div class="content-top text-center d-flex flex-column align-items-center justify-content-center gap-3 w-100">
 
-      <img :src="getImahePath(`../../assets/img/${src}`)" :alt="name">
+      <img :src="getImagePath(`../../assets/img/${src}`)" :alt="name">
       <h6>
         {{name}}
       </h6>
