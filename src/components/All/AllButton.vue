@@ -18,7 +18,7 @@ export default {
 
 <template>
     <div>
-        <button class="p-2" :class="color">
+        <button class="py-3 px-4" :class="color">
             {{text}}
             <span>
                 <font-awesome-icon icon="fa-solid fa-arrow-right-long" />
