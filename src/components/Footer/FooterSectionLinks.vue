@@ -1,12 +1,16 @@
 <script>
 import SectionTitle from '../All/SectionTitle.vue'
+import AllButton from '../All/AllButton.vue'
+import { store } from '../../store'
 export default {
   name: 'FooterSectionLinks',
   components: {
     SectionTitle,
+    AllButton,
   },
   data() {
     return {
+      store,
     }
   },
   methods: {
@@ -27,7 +31,7 @@ export default {
             <!-- START COL -->
             <div class="col">
               <div class="mb-3">
-                <SectionTitle class=".title_list_color" :title="'about'" :descriptionBoll="false" :section="'h6'" />
+                <SectionTitle class="title_list_color" :title="'about'" :descriptionBoll="false" :section="'h6'" />
               </div>
               <ul class="ps-0">
                 <li class="text_list">
@@ -58,7 +62,7 @@ export default {
             <!-- START COL -->
             <div class="col">
               <div class="mb-3">
-                <SectionTitle class=".title_list_color" :title="'about'" :descriptionBoll="false" :section="'h6'" />
+                <SectionTitle class="title_list_color" :title="'about'" :descriptionBoll="false" :section="'h6'" />
               </div>
               <ul class="ps-0 fa-ul">
                 <li class="text_list">
@@ -90,7 +94,7 @@ export default {
             <!-- START COL -->
             <div class="col">
               <div class="mb-3">
-                <SectionTitle class=".title_list_color" :title="'important links'" :descriptionBoll="false"
+                <SectionTitle class="title_list_color" :title="'important links'" :descriptionBoll="false"
                   :section="'h6'" />
               </div>
               <ul class="ps-0">
@@ -129,7 +133,7 @@ export default {
             <!-- START COL -->
             <div class="col">
               <div class="mb-3">
-                <SectionTitle class=".title_list_color" :title="'about'" :descriptionBoll="false" :section="'h6'" />
+                <SectionTitle class="title_list_color" :title="'about'" :descriptionBoll="false" :section="'h6'" />
               </div>
               <ul class="ps-0 fa-ul">
                 <li class="text_list">
@@ -137,7 +141,7 @@ export default {
                     <font-awesome-icon icon="fa-solid fa-location-dot" />
                   </span>
                   <p>
-                    <a href="#nogo"  class="text-decoration-none">
+                    <a href="#nogo" class="text-decoration-none">
                       457 BIGBlue Street, NY 10013
                     </a>
                   </p>
@@ -147,7 +151,7 @@ export default {
                     <font-awesome-icon icon="fa-solid fa-phone" />
                   </span>
                   <p>
-                    <a href="#nogo"  class="text-decoration-none">
+                    <a href="#nogo" class="text-decoration-none">
                       (315) 5512-2579
                     </a>
                   </p>
@@ -157,12 +161,32 @@ export default {
                     <font-awesome-icon icon="fa-solid fa-envelope" />
                   </span>
                   <p>
-                    <a href="mailto:everlead@mikado.com"  class="text-decoration-none">
+                    <a href="mailto:everlead@mikado.com" class="text-decoration-none">
                       everlead@mikado.com
                     </a>
                   </p>
                 </li>
               </ul>
+              <div>
+                <form action="" @submit.prevent>
+                  <div class="input-group mb-3 w-100">
+                    <input class="my_input pb-1 form-control rounded-0" type="text" placeholder="Your name"
+                    v-model="store.footerLinks[0].textName">
+                    <span class="my_input -sub input-group-text rounded-0">SUBSCRIBE</span>
+                  </div>
+                  <div class="mb-3 w-100">
+                    <input class="my_input pb-1 w-100" type="email" placeholder="Your email"
+                    v-model="store.footerLinks[0].textEmail" v-if="store.footerLinks[0].textName != ''">
+                  </div>
+
+                  <AllButton 
+                  v-if="store.footerLinks[0].textEmail != ''"
+                  :text="'send'"
+                  :color="'tm_orange'"
+                  />
+                </form>
+
+              </div>
 
 
             </div>
@@ -191,6 +215,10 @@ export default {
         & a {
           @include text-list_default;
         }
+
+        & .fa-li {
+          color: $text_color-8;
+        }
       }
 
       &.icon_list span {
@@ -204,6 +232,20 @@ export default {
         }
       }
     }
+  }
+
+  .my_input {
+    background-color: $background_color-14;
+    border: none;
+    border-bottom: 1px solid $border_color-4;
+    color: $background_color-1;
+    font-family: 'Playfair Display', serif;
+
+    &.-sub{
+      font-size: .7rem;
+      font-family: 'Lato', sans-serif;
+    }
+
   }
 }
 </style>

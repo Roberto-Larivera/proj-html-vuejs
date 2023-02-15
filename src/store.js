@@ -28,6 +28,13 @@ export const store = reactive({
           hover: 'h4-clients-img-10-1.png',
           status: false
         },
+      ],
+      // FooterSectionLinks
+      footerLinks:[
+        {
+            textName: '',
+            textEmail: ''
+        }
       ]
     }
 );
