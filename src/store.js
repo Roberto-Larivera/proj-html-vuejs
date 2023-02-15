@@ -8,7 +8,7 @@ export const store = reactive({
       imgSrc: 'rev-slider-main-home-img-03.jpg'
   },
     {
-      imgSrc: 'rev-slider-main-home-img-02.jpg'
+      imgSrc: 'rev-slider-main-home-img-02.png'
   },
 ],
   // MainSectionClient
