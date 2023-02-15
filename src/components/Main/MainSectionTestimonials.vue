@@ -27,7 +27,54 @@ export default {
           src: 'h3-img-08.png',
           status: false
         },
-      ]
+      ],
+      autoPlay: null,
+      mainTestimonialsCurrent: 0,
+    }
+  },
+  methods: {
+    getImagePath(imgPath) {
+      return new URL(imgPath, import.meta.url).href;
+    },
+    nextClick() {
+      if (this.mainTestimonialsCurrent == (this.mainTestimonialsList.length - 1)) {
+        this.mainTestimonialsCurrent = 0;
+      } else {
+        this.mainTestimonialsCurrent++;
+      }
+    },
+
+    prevClick() {
+      if (this.mainTestimonialsCurrent == 0) {
+        this.mainTestimonialsCurrent = (this.mainTestimonialsList.length - 1)
+      } else {
+        this.mainTestimonialsCurrent--;
+      }
+    },
+    hoverStop() {
+      //console.log('SONO IN HOVER');
+      clearInterval(this.autoPlay);
+      this.autoPlay = null;
+    },
+    hoverPlay() {
+      //console.log('SONO FUORI HOVER');
+      this.startAutoPlay();
+    },
+    startAutoPlay() {
+      this.autoPlay = setInterval(this.nextClick, 3000);
+    },
+   
+  },
+  mounted() {
+    this.startAutoPlay()
+  },
+  computed:{
+    getPercentage(){
+      let iFrame = 100 / this.mainTestimonialsList.length
+      let duble = (iFrame) * this.mainTestimonialsCurrent
+      duble = iFrame + duble
+      console.log(duble)
+      return duble
     }
   }
 
@@ -35,17 +82,12 @@ export default {
 </script>
 
 <template>
-  <div class="bg_plug">
-    <div class="container h-100 position-relative">
-      <div class="text_bg w-100 h-100 position-absolute">
-        <div class="h-100 w-100">
-          Testimonial
-        </div>
-      </div>
+  <div class="bg_plug" >
+    <div class="container h-100">
       <div class="w-100 h-100 py-5">
-        <div class="row h-100">
+        <div class="row h-100" @mouseenter="hoverStop()" @mouseleave="hoverPlay()">
           <div class="col d-flex align-items-center justify-content-start h-100">
-            <button class="btn rounded-circle">
+            <button class="btn rounded-circle" @click="prevClick()">
               <font-awesome-icon icon="fa-solid fa-arrow-left-long" />
             </button>
 
@@ -55,9 +97,9 @@ export default {
             <div class="row h-100">
               <div class="col-6 offset-3 d-flex flex-column justify-content-center align-items-center h-100">
 
-                <template v-for="element in mainTestimonialsList">
+                <template v-for="element, index in mainTestimonialsList">
 
-                  <MainSpyScTestimonial v-if="element.status" :src="element.src" :name="element.name"
+                  <MainSpyScTestimonial v-if="index == mainTestimonialsCurrent" :src="element.src" :name="element.name"
                     :comment="element.comment" />
 
 
@@ -67,7 +109,7 @@ export default {
                     01
                   </span>
                   <div class="bar-live w-50 position-relative">
-                    <!-- <div class="bar-active position-absolute" :style="`width: ${percentage}%`"></div> -->
+                    <div class="bar-active position-absolute" :style="`width: ${getPercentage}%`"></div>
 
                     <div class="bar-border"></div>
 
@@ -81,7 +123,7 @@ export default {
 
           </div>
           <div class="col d-flex align-items-center justify-content-end h-100">
-            <button class="btn rounded-circle">
+            <button class="btn rounded-circle" @click="nextClick()">
               <font-awesome-icon icon="fa-solid fa-arrow-right-long" />
             </button>
 

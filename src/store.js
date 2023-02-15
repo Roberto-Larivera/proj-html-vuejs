@@ -3,14 +3,15 @@ import { reactive } from 'vue'
 export const store = reactive({
   // HeaderBottom
   headerBottomCurrent: 0,
-  headerBottomList:[
+  headerBottomList: [
     {
       imgSrc: 'rev-slider-main-home-img-03.jpg'
-  },
+    },
     {
       imgSrc: 'rev-slider-main-home-img-02.png'
-  },
-],
+    },
+  ],
+  
   // MainSectionClient
   mainClientList: [
     {
