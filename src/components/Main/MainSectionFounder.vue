@@ -9,11 +9,11 @@ export default {
   },
   data() {
     return {
-      MainSectionFounderList:[
-      "h1-blog-img-01.jpg",
-      "h1-blog-img-02.jpg",
-      "h1-blog-img-03.jpg",
-      "h1-blog-img-04.jpg",
+      MainSectionFounderList: [
+        "h1-blog-img-01.jpg",
+        "h1-blog-img-02.jpg",
+        "h1-blog-img-03.jpg",
+        "h1-blog-img-04.jpg",
       ],
       MainSectionFounderCurrent: 0,
       autoPlay: null
@@ -24,37 +24,37 @@ export default {
       return new URL(imgPath, import.meta.url).href;
     },
     nextClick() {
-            if (this.MainSectionFounderCurrent == (this.MainSectionFounderList.length - 1)) {
-                this.MainSectionFounderCurrent = 0;
-            } else {
-                this.MainSectionFounderCurrent++;
-            }
-        },
+      if (this.MainSectionFounderCurrent == (this.MainSectionFounderList.length - 1)) {
+        this.MainSectionFounderCurrent = 0;
+      } else {
+        this.MainSectionFounderCurrent++;
+      }
+    },
 
-        prevClick() {
-            if (this.MainSectionFounderCurrent == 0) {
-                this.MainSectionFounderCurrent = (this.MainSectionFounderList.length - 1)
-            } else {
-                this.MainSectionFounderCurrent--;
-            }
-        },
-        hoverStop() {
-            //console.log('SONO IN HOVER');
-            clearInterval(this.autoPlay);
-            this.autoPlay = null;
-        },
-        hoverPlay() {
-            //console.log('SONO FUORI HOVER');
-            this.startAutoPlay();
-        },
-        startAutoPlay() {
-            this.autoPlay = setInterval(this.nextClick, 3000);
-        },
+    prevClick() {
+      if (this.MainSectionFounderCurrent == 0) {
+        this.MainSectionFounderCurrent = (this.MainSectionFounderList.length - 1)
+      } else {
+        this.MainSectionFounderCurrent--;
+      }
     },
-    mounted() {
-        this.startAutoPlay()
+    hoverStop() {
+      //console.log('SONO IN HOVER');
+      clearInterval(this.autoPlay);
+      this.autoPlay = null;
     },
-  }
+    hoverPlay() {
+      //console.log('SONO FUORI HOVER');
+      this.startAutoPlay();
+    },
+    startAutoPlay() {
+      this.autoPlay = setInterval(this.nextClick, 3000);
+    },
+  },
+  mounted() {
+    this.startAutoPlay()
+  },
+}
 </script>
 
 <template>
@@ -70,10 +70,11 @@ export default {
                 <div class="position-relative" @mouseenter="hoverStop()" @mouseleave="hoverPlay()">
 
                   <template v-for="element, index in MainSectionFounderList">
-                  <img class="w-100" :src="getImagePath(`../../assets/img/${element}`)" alt="section-founder" v-if="MainSectionFounderCurrent == index">
+                    <img class="w-100" :src="getImagePath(`../../assets/img/${element}`)" alt="section-founder"
+                      v-if="MainSectionFounderCurrent == index">
                   </template>
 
-                  <div class="position-absolute bottom-0 start-0" >
+                  <div class="position-absolute bottom-0 start-0">
                     <button class="py-3 px-4 tm_orange" @click="prevClick()">
                       <span>
                         <font-awesome-icon icon="fa-solid fa-arrow-left-long" />
@@ -96,7 +97,32 @@ export default {
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem provident officia blanditiis.
                 </p>
                 <div class="div">
-                  icona icona icona firma
+                  <ul class="d-flex list_icon">
+                    <li>
+                      <a href="#nogo">
+                        <span>
+                          <font-awesome-icon icon="fa-brands fa-linkedin-in" />
+                        </span>
+
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#nogo">
+                        <span>
+                          <font-awesome-icon icon="fa-brands fa-facebook-f" />
+                        </span>
+
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#nogo">
+                        <span>
+                          <font-awesome-icon icon="fa-brands fa-twitter" />
+                        </span>
+
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -132,7 +158,19 @@ button {
     }
   }
 }
-
+.list_icon{
+  padding: 0;
+  li{
+    list-style-type: none;
+    margin-right: 1rem;
+    a{
+      color: $text_color-8;
+      &:hover{
+        color: $text_color-13;
+      }
+    }
+  }
+}
 .bg_section {
   background-image: url(../../../public/svg/svg-4.svg);
   background-repeat: no-repeat;
