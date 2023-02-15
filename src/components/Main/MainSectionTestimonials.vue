@@ -36,8 +36,12 @@ export default {
 
 <template>
   <div class="bg_plug">
-    <div class="container h-100">
-
+    <div class="container h-100 position-relative">
+      <div class="text_bg w-100 h-100 position-absolute">
+        <div class="h-100 w-100" >
+          Testimonial
+        </div>
+      </div>
       <div class="w-100 h-100 py-5">
         <div class="row h-100">
           <div class="col d-flex align-items-center justify-content-start h-100">
@@ -92,7 +96,12 @@ export default {
   background-color: $background_color-14;
   height: 500px;
 }
-
+.text_bg{
+ span{
+  font-size: 100%;
+  color: $text_color-14;
+ }
+}
 .btn {
   @include btn-carousel-default;
   color: $fill_color-2;

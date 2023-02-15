@@ -60,7 +60,7 @@ export default {
 
         <div class="row">
 
-          <div class="col d-flex justify-content-center align-items-center">
+          <div class="col d-flex justify-content-start align-items-center">
             <button class="btn rounded-circle">
               <font-awesome-icon icon="fa-solid fa-arrow-left-long" />
             </button>
@@ -85,7 +85,7 @@ export default {
             </div>
 
           </div>
-          <div class="col d-flex justify-content-center align-items-center">
+          <div class="col d-flex justify-content-end align-items-center">
             <button class="btn rounded-circle">
               <font-awesome-icon icon="fa-solid fa-arrow-right-long" />
             </button>
