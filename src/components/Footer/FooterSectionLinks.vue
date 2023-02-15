@@ -72,7 +72,7 @@ export default {
                   </p>
                 </li>
                 <li class="text_list">
-                  <span class="fa-li"  style="--fa-li-width: 4em;">
+                  <span class="fa-li" style="--fa-li-width: 4em;">
                     <font-awesome-icon icon="fa-brands fa-twitter" />
                   </span>
                   <p>
@@ -90,35 +90,78 @@ export default {
             <!-- START COL -->
             <div class="col">
               <div class="mb-3">
-                <SectionTitle class=".title_list_color" :title="'important links'" :descriptionBoll="false" :section="'h6'" />
+                <SectionTitle class=".title_list_color" :title="'important links'" :descriptionBoll="false"
+                  :section="'h6'" />
               </div>
               <ul class="ps-0">
                 <li class="text_list">
-                  <a href="#nogo">
+                  <a href="#nogo" class="text-decoration-none">
                     About me
                   </a>
                 </li>
                 <li class="text_list">
-                  <a href="#nogo">
+                  <a href="#nogo" class="text-decoration-none">
                     About us
                   </a>
                 </li>
                 <li class="text_list">
-                  <a href="#nogo">
+                  <a href="#nogo" class="text-decoration-none">
                     Language packs
                   </a>
                 </li>
                 <li class="text_list">
-                  <a href="#nogo">
+                  <a href="#nogo" class="text-decoration-none">
                     Become a coach
                   </a>
                 </li>
                 <li class="text_list">
-                  <a href="#nogo">
+                  <a href="#nogo" class="text-decoration-none">
                     Monthly events
                   </a>
                 </li>
-                
+
+              </ul>
+
+
+            </div>
+            <!-- / END COL -->
+
+            <!-- START COL -->
+            <div class="col">
+              <div class="mb-3">
+                <SectionTitle class=".title_list_color" :title="'about'" :descriptionBoll="false" :section="'h6'" />
+              </div>
+              <ul class="ps-0 fa-ul">
+                <li class="text_list">
+                  <span class="fa-li" style="--fa-li-width: 4em;">
+                    <font-awesome-icon icon="fa-solid fa-location-dot" />
+                  </span>
+                  <p>
+                    <a href="#nogo"  class="text-decoration-none">
+                      457 BIGBlue Street, NY 10013
+                    </a>
+                  </p>
+                </li>
+                <li class="text_list">
+                  <span class="fa-li" style="--fa-li-width: 4em;">
+                    <font-awesome-icon icon="fa-solid fa-phone" />
+                  </span>
+                  <p>
+                    <a href="#nogo"  class="text-decoration-none">
+                      (315) 5512-2579
+                    </a>
+                  </p>
+                </li>
+                <li class="text_list">
+                  <span class="fa-li" style="--fa-li-width: 4em;">
+                    <font-awesome-icon icon="fa-solid fa-envelope" />
+                  </span>
+                  <p>
+                    <a href="mailto:everlead@mikado.com"  class="text-decoration-none">
+                      everlead@mikado.com
+                    </a>
+                  </p>
+                </li>
               </ul>
 
 
@@ -144,6 +187,10 @@ export default {
 
       &.text_list {
         @include text-list_default;
+
+        & a {
+          @include text-list_default;
+        }
       }
 
       &.icon_list span {

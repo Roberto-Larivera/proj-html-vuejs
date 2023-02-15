@@ -21,6 +21,8 @@ import { faCirclePlus } from '@fortawesome/free-solid-svg-icons'
 import {faLinkedinIn} from '@fortawesome/free-brands-svg-icons'
 import {faFacebookF} from '@fortawesome/free-brands-svg-icons'
 import {faTwitter} from '@fortawesome/free-brands-svg-icons'
+import { faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
 library.add(
@@ -37,6 +39,8 @@ library.add(
     faLinkedinIn,
     faFacebookF,
     faTwitter,
+    faPhone,
+    faEnvelope
     )
 
 
