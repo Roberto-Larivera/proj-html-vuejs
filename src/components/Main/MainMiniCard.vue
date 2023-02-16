@@ -1,9 +1,11 @@
 <script>
+import  {DateTime}  from 'luxon';
+
 export default {
   name: 'MainMiniCard',
   data() {
     return {
-
+      DateTime,
     }
   },
   props: {
@@ -29,6 +31,20 @@ export default {
     },
 
   },
+  methods: {
+    newDay(element) {
+      const dt = DateTime;
+
+      return dt.fromFormat(element,'LLL d, yyyy').toFormat('dd');
+
+    },
+    newMonth(element) {
+      const dt = DateTime;
+
+      return dt.fromFormat(element, 'LLL d, yyyy').toFormat('LLL, yyyy');
+
+    }
+  },
 
 }
 </script>
@@ -38,8 +54,8 @@ export default {
     <div class="min_card d-flex p-3">
       <div class="min_card-left">
         <div class="date  w-100 text-center p-1 px-3">
-          <div>{{date}}</div>
-          <span>{{date}}</span>
+          <div>{{newDay(date)}}</div>
+          <span>{{newMonth(date)}}</span>
         </div>
       </div>
       <div class="min_card-right ms-3">

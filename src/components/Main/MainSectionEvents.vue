@@ -1,5 +1,6 @@
 <script>
 import MainMiniCard from './MainMiniCard.vue'
+
 export default {
   name: 'MainSectionEvents',
   components: {
@@ -31,6 +32,11 @@ export default {
         },
       ]
     }
+  },
+  methods: {
+  },
+  computed: {
+    
   }
 
 }
@@ -59,7 +65,7 @@ export default {
                         :address="element.address" />
                     </li>
                   </ul>
-                  
+
                 </div>
 
               </div>
