@@ -91,8 +91,24 @@ export default {
         this.next()
       }
     },
+    hoverStop() {
+      //console.log('SONO IN HOVER');
+      clearInterval(this.autoPlay);
+      this.autoPlay = null;
+    },
+    hoverPlay() {
+      //console.log('SONO FUORI HOVER');
+      this.startAutoPlay();
+    },
+    startAutoPlay() {
+      this.autoPlay = setInterval(this.next, 3000);
+    },
+  },
+  mounted() {
+    this.startAutoPlay()
   },
 }
+
 </script>
 
 <template>
