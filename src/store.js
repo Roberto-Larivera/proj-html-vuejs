@@ -40,6 +40,22 @@ export const store = reactive({
       status: false
     },
   ],
+
+  // MainSectionContact
+  mainContactList: [
+    {
+      title: 'New York Coaching',
+      status: false
+    },
+    {
+      title: 'London Coaching',
+      status: false
+    },
+    {
+      title: 'Melbourne Coaching',
+      status: false
+    }
+  ],
   // FooterSectionLinks
   footerLinks: [
     {

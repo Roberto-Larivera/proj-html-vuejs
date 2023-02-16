@@ -1,4 +1,5 @@
 <script>
+import { store } from '../../store'
 import SectionTitle from '../All/SectionTitle.vue'
 import AllButton from '../All/AllButton.vue'
 export default {
@@ -9,9 +10,25 @@ export default {
   },
   data() {
     return {
+      store
+    }
+  },
+  methods: {
+    menuInfoOpen(item, x) {
+      if (this.contacts[this.contactActive].messages[this.currentMessage].statusMenu == true && this.contacts[this.contactActive].messages[this.currentMessage] != item) {
+        this.contacts[this.contactActive].messages[this.currentMessage].statusMenu = false;
+        item.statusMenu = !item.statusMenu
+      }
+      else if (this.contacts[this.contactActive].messages[this.currentMessage] == item) {
+        item.statusMenu = !item.statusMenu
+      }
+      else {
+        item.statusMenu = !item.statusMenu
+      }
+      this.currentMessage = x;
 
     }
-  }
+  },
 
 }
 </script>
@@ -28,25 +45,22 @@ export default {
               <img class="w-100" src="../../assets/img/h1-contact-rev-01.png">
               <div class="w-100 h-100 position-absolute top-50 start-50 translate-middle">
 
-                <span id="icon_plus-1" class="icon_plus p-2 position-absolute">
-                  <font-awesome-icon icon="fa-solid fa-circle-plus" />
-                  <div class="box-info p-3">
-                    <h6>
-                      Lorem ipsum
-                    </h6>
-                    <a class="my_links" href="#nogo">
-                      read more
-                    </a>
-                  </div>
-                </span>
-
-                <span id="icon_plus-2" class="icon_plus p-2 position-absolute">
-                  <font-awesome-icon icon="fa-solid fa-circle-plus" />
-                </span>
-
-                <span id="icon_plus-3" class="icon_plus p-2 position-absolute">
-                  <font-awesome-icon icon="fa-solid fa-circle-plus" />
-                </span>
+                <template v-for="element,index in store.mainContactList ">
+                  <span :id="`icon_plus-${index}`" class="icon_plus p-2 position-absolute" @mouseover="element.status = true" @mouseleave="element.status = false">
+                    <span class="position-relative z-1">
+                      <font-awesome-icon icon="fa-solid fa-circle-plus" />
+                    </span>
+                    <div class="box-info p-3 position-relative" v-if="element.status">
+                      <h6>
+                        {{element.title}}
+                        
+                      </h6>
+                      <a class="my_links" href="#nogo">
+                        read more
+                      </a>
+                    </div>
+                  </span>
+                </template>
 
               </div>
             </div>
@@ -81,26 +95,29 @@ export default {
   .icon_plus {
     color: $text_color-8;
     font-size: 1rem;
-
-    &#icon_plus-1 {
+    span{
+      z-index: 1;
+    }
+    &#icon_plus-0 {
       top: 30%;
       left: 23%;
     }
 
-    &#icon_plus-2 {
+    &#icon_plus-1 {
       top: 24%;
       left: 48%;
     }
 
-    &#icon_plus-3 {
+    &#icon_plus-2 {
       top: 63%;
       left: 76%;
     }
 
     .box-info {
       background-color: $background_color-1;
-
+      width: 250px;
       box-shadow: 0px 0px 17px 0px $background_color-11;
+      z-index: 3;
 
       a.my_links {
         @include link_default;

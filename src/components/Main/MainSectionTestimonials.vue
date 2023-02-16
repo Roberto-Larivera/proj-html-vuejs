@@ -73,7 +73,7 @@ export default {
       let iFrame = 100 / this.mainTestimonialsList.length
       let duble = (iFrame) * this.mainTestimonialsCurrent
       duble = iFrame + duble
-      console.log(duble)
+      //console.log(duble)
       return duble
     }
   }

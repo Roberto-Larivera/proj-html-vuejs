@@ -28,8 +28,8 @@ export default {
 <template>
   <div class="my_card p-3 d-flex flex-column align-items-center">
     <div class="my_card-img mb-4">
-      <img :src="urlImage" alt="placeholder-img-150" v-if="srcImage == null">
-      <img :src="`../../../public/svg/${srcImage}`" :alt="title" v-else>
+      <img class="w-100" :src="urlImage" alt="placeholder-img-150" v-if="srcImage == null">
+      <img class="w-100" :src="`../../../public/svg/${srcImage}`" :alt="title" v-else>
       
       
 
