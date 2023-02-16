@@ -15,20 +15,24 @@ export default {
         url: {
             type: String,
             default: '#nogo'
+        },
+        src: {
+            type: String,
+            default: 'https://via.placeholder.com/150'
         }
 
     }
-
+    
 }
 </script>
 
 <template>
-    <div>
+    <div class="d-flex flex-column justify-content-between h-100 text-start ">
         <div class="content-top w-100 mb-4">
 
             <div class="top-imgs d-flex flex-column position-relative">
-                <img src="../../assets/img/h1-img-01.jpg" alt="img-1">
-                <div class="text-bg text-center p-1 px-3 position-absolute d-flex align-items-center">
+                <img :src="src" alt="img-1">
+                <div class="text-bg text-center p-2 px-3 position-absolute d-flex align-items-center">
                     <span class="me-1">
                         <font-awesome-icon icon="fa-solid fa-tag" />
                     </span>
@@ -89,7 +93,7 @@ export default {
     bottom: -10px;
 
     span {
-        color: $text_color-3;
+        color: $text_color-1;
         font-weight: 300;
         font-size: 0.7rem;
         text-transform: capitalize;
