@@ -62,7 +62,7 @@ export default {
             <!-- START COL -->
             <div class="col">
               <div class="mb-3">
-                <SectionTitle class="title_list_color" :title="'about'" :descriptionBoll="false" :section="'h6'" />
+                <SectionTitle class="title_list_color" :title="'twitter'" :descriptionBoll="false" :section="'h6'" />
               </div>
               <ul class="ps-0 fa-ul">
                 <li class="text_list">
@@ -133,7 +133,7 @@ export default {
             <!-- START COL -->
             <div class="col">
               <div class="mb-3">
-                <SectionTitle class="title_list_color" :title="'about'" :descriptionBoll="false" :section="'h6'" />
+                <SectionTitle class="title_list_color" :title="'contact me'" :descriptionBoll="false" :section="'h6'" />
               </div>
               <ul class="ps-0 fa-ul">
                 <li class="text_list">
