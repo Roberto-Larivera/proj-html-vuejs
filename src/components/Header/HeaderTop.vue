@@ -36,7 +36,8 @@ export default {
 </script>
 
 <template>
-    <div class="row h-100 p-3 align-content-center justify-content-between">
+   <div class="container h-100">
+     <div class="row h-100 p-3 align-content-center justify-content-between">
         <div class="col-auto h-100 d-flex align-items-center">
             <img class="h-25" src="../../assets/img/logo-img-01.png" alt="logo_Everlead">
         </div>
@@ -65,6 +66,7 @@ export default {
             </ul>
         </div>
     </div>
+   </div>
 </template>
 
 <style lang="scss" scoped>
